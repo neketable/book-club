@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 import { set } from '@ember/object';
-import ENV from 'books-demo/config/environment';
+import ENV from 'book-club/config/environment';
 
 export default Controller.extend({
   dataService: service('data'),

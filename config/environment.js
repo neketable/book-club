@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'books-demo',
+    modulePrefix: 'book-club',
     environment,
     backendURL: 'http://localhost:3000',
     rootURL: '/',
@@ -63,7 +63,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'deploy') {
-    ENV.rootURL = '/books-demo/';
+    ENV.rootURL = '/book-club/';
   }
 
   return ENV;

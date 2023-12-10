@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
-import ENV from 'books-demo/config/environment';
+import ENV from 'book-club/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
   host: ENV.backendURL,

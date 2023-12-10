@@ -1,6 +1,6 @@
 import Application from '@ember/application';
 
-import { initialize } from 'books-demo/initializers/start-app';
+import { initialize } from 'book-club/initializers/start-app';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import { run } from '@ember/runloop';

@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import fetch from 'fetch';
-import ENV from 'books-demo/config/environment';
+import ENV from 'book-club/config/environment';
 import { validator, buildValidations } from 'ember-cp-validations';
 import { get, set } from '@ember/object';
 import { inject as service } from '@ember/service';

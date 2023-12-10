@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import ENV from 'books-demo/config/environment';
+import ENV from 'book-club/config/environment';
 import { A } from '@ember/array';
 
 export default Service.extend({
