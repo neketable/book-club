@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Книга",
+      "projection": "КнигаL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Спикер",
+      "projection": "СпикерL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Заявка",
+  "name": "IISBookClubЗаявкаE",
+  "className": "ЗаявкаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-заявка",
+      "modelProjection": "ЗаявкаE"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+﻿{
+  "name": "IISBookClubКнига",
+  "modelName": "i-i-s-book-club-книга",
+  "className": "Книга",
+  "nameSpace": "IIS.BookClub",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "название",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "автор",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "количествоСтраниц",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "uRLОбложки",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "uRLОписания",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "теги",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "средняяОценка",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КнигаE",
+      "modelName": "i-i-s-book-club-книга",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "автор",
+          "caption": "Автор",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "количествоСтраниц",
+          "caption": "Количество страниц",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "uRLОбложки",
+          "caption": "URL обложки",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "uRLОписания",
+          "caption": "URL описания",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "теги",
+          "caption": "Теги",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "средняяОценка",
+          "caption": "Средняя оценка",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "КнигаL",
+      "modelName": "i-i-s-book-club-книга",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "автор",
+          "caption": "Автор",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "количествоСтраниц",
+          "caption": "Количество страниц",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "uRLОбложки",
+          "caption": "URL обложки",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "uRLОписания",
+          "caption": "URL описания",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "теги",
+          "caption": "Теги",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "средняяОценка",
+          "caption": "Средняя оценка",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

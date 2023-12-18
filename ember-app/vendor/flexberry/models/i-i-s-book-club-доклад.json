@@ -1,0 +1,165 @@
+﻿{
+  "name": "IISBookClubДоклад",
+  "modelName": "i-i-s-book-club-доклад",
+  "className": "Доклад",
+  "nameSpace": "IIS.BookClub",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаДоклада",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "оценкаКниги",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "uRLПрезентации",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "uRLВидео",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "резенция",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "книга",
+      "relatedTo": "i-i-s-book-club-книга",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "спикер",
+      "relatedTo": "i-i-s-book-club-спикер",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "встречаКлуба",
+      "relatedTo": "i-i-s-book-club-встреча-клуба",
+      "inverse": "доклад"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДокладE",
+      "modelName": "i-i-s-book-club-доклад",
+      "attrs": [
+        {
+          "name": "датаДоклада",
+          "caption": "Дата доклада",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "оценкаКниги",
+          "caption": "Оценка книги",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "uRLПрезентации",
+          "caption": "URL презентации",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "uRLВидео",
+          "caption": "URL видео",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "резенция",
+          "caption": "Резенция",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Название",
+          "lookupValueField": "название",
+          "relationName": "Книга",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Книга",
+          "name": "книга",
+          "relatedTo": "i-i-s-book-club-книга",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Спикер",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Спикер",
+          "name": "спикер",
+          "relatedTo": "i-i-s-book-club-спикер",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

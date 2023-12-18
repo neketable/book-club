@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-book-club-спикер-e",
+  "editForm": "i-i-s-book-club-спикер-e",
+  "external": false,
+  "caption": "Спикер",
+  "name": "IISBookClubСпикерL",
+  "className": "СпикерL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-спикер",
+      "modelProjection": "СпикерL"
+    }
+  ]
+}

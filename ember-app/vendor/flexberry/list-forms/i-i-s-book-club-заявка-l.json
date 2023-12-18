@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-book-club-заявка-e",
+  "editForm": "i-i-s-book-club-заявка-e",
+  "external": false,
+  "caption": "Заявка",
+  "name": "IISBookClubЗаявкаL",
+  "className": "ЗаявкаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-заявка",
+      "modelProjection": "ЗаявкаL"
+    }
+  ]
+}

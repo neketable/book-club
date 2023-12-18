@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Book-club",
+  "applicationTitle": "Book-club",
+  "items": [
+    {
+      "link": null,
+      "menuName": "book-club",
+      "caption": "book-club",
+      "title": "book-club",
+      "children": [
+        {
+          "link": "i-i-s-book-club-спикер-l",
+          "menuName": null,
+          "caption": "Спикер",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-book-club-заявка-l",
+          "menuName": null,
+          "caption": "Заявка",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-book-club-план-встречи-l",
+          "menuName": null,
+          "caption": "План встречи",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-book-club-встреча-клуба-l",
+          "menuName": null,
+          "caption": "Встреча клуба",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-book-club-книга-l",
+          "menuName": null,
+          "caption": "Книга",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

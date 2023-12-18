@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = IIS.BookClub
+build_property.ProjectDir = D:\ember_proj\book-club\BookClub\ODataBackend\

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "План встречи",
+  "name": "IISBookClubПланВстречиE",
+  "className": "ПланВстречиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-план-встречи",
+      "modelProjection": "ПланВстречиE"
+    }
+  ]
+}

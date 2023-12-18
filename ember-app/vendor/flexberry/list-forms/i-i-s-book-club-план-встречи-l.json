@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-book-club-план-встречи-e",
+  "editForm": "i-i-s-book-club-план-встречи-e",
+  "external": false,
+  "caption": "План встречи",
+  "name": "IISBookClubПланВстречиL",
+  "className": "ПланВстречиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-план-встречи",
+      "modelProjection": "ПланВстречиL"
+    }
+  ]
+}

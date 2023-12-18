@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "IIS.BookClub": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:6500",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "BackendRoot": "http://localhost",
+            "DefConnStr": "Server=localhost;Port=5432;User Id=postgres;Password=1116;Database=bookClub;Keepalive=30;CommandTimeout=180;"
+        }
+    }
+  }
+}

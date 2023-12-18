@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookClub.Objects", "Objects\BookClub.Objects.csproj", "{1962F004-A348-49FA-8723-EECD992F0451}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookClub.ODataBackend", "ODataBackend\BookClub.ODataBackend.csproj", "{C91E796A-7056-4776-B3C8-4EE3146F7AD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1962F004-A348-49FA-8723-EECD992F0451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1962F004-A348-49FA-8723-EECD992F0451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1962F004-A348-49FA-8723-EECD992F0451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1962F004-A348-49FA-8723-EECD992F0451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91E796A-7056-4776-B3C8-4EE3146F7AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91E796A-7056-4776-B3C8-4EE3146F7AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91E796A-7056-4776-B3C8-4EE3146F7AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91E796A-7056-4776-B3C8-4EE3146F7AD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E680692-31C8-4342-9C12-7C50B28C6D58}
+	EndGlobalSection
+EndGlobal

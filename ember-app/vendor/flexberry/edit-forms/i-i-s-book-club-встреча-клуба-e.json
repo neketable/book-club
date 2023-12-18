@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "книга",
+      "displayAttributeName": "название",
+      "required": true,
+      "relationName": "Доклад.Книга",
+      "projection": "КнигаL",
+      "detailModelName": "i-i-s-book-club-доклад"
+    },
+    {
+      "master": "спикер",
+      "displayAttributeName": "фамилия",
+      "required": true,
+      "relationName": "Доклад.Спикер",
+      "projection": "СпикерL",
+      "detailModelName": "i-i-s-book-club-доклад"
+    }
+  ],
+  "external": false,
+  "caption": "Встреча клуба",
+  "name": "IISBookClubВстречаКлубаE",
+  "className": "ВстречаКлубаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-встреча-клуба",
+      "modelProjection": "ВстречаКлубаE"
+    }
+  ]
+}

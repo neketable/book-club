@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISBookClubПланВстречи",
+  "modelName": "i-i-s-book-club-план-встречи",
+  "className": "ПланВстречи",
+  "nameSpace": "IIS.BookClub",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаВстречи",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПланВстречиE",
+      "modelName": "i-i-s-book-club-план-встречи",
+      "attrs": [
+        {
+          "name": "датаВстречи",
+          "caption": "Дата встречи",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПланВстречиL",
+      "modelName": "i-i-s-book-club-план-встречи",
+      "attrs": [
+        {
+          "name": "датаВстречи",
+          "caption": "Дата встречи",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
