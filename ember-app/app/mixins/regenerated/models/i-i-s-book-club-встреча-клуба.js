@@ -34,7 +34,7 @@ export let defineProjections = function (modelClass) {
       оценкаКниги: attr('Оценка книги', { index: 1 }),
       uRLПрезентации: attr('URL презентации', { index: 2 }),
       uRLВидео: attr('URL видео', { index: 3 }),
-      резенция: attr('Резенция', { index: 4 }),
+      рецензия: attr('Рецензия', { index: 4 }),
       книга: belongsTo('i-i-s-book-club-книга', 'Книга', {
         название: attr('Название', { index: 6, hidden: true })
       }, { index: 5, displayMemberPath: 'название' }),

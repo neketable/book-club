@@ -1,6 +1,8 @@
 import ListFormRoute from 'ember-flexberry/routes/list-form';
 import { computed } from '@ember/object';
-export default ListFormRoute.extend({
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
+
+export default ListFormRoute.extend(AuthenticatedRouteMixin, {
   /**
     Name of model projection to be used as record's properties limitation.
 

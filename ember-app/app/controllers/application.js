@@ -9,6 +9,7 @@ import config from '../config/environment';
 
 
 export default Controller.extend({
+  session: service(),
   sitemap: computed('i18n.locale', function () {
     let i18n = this.get('i18n');
 
@@ -217,6 +218,8 @@ export default Controller.extend({
       @method actions.logout
     */
     logout() {
+      let session = this.get('session');
+      session.invalidate();
       this.transitionToRoute('login');
     },
 

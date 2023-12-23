@@ -139,7 +139,12 @@ module.exports = function(environment) {
 
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: 'http://localhost:6500/api/login',
+      refreshAccessTokens: false
+    },
   };
 
   // Read more about CSP:

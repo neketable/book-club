@@ -64,9 +64,9 @@
             URLВидео.
             </summary>
         </member>
-        <member name="P:IIS.BookClub.Доклад.Резенция">
+        <member name="P:IIS.BookClub.Доклад.Рецензия">
             <summary>
-            Резенция.
+            Рецензия.
             </summary>
         </member>
         <member name="P:IIS.BookClub.Доклад.Книга">

@@ -16,6 +16,7 @@ export let ValidationRules = {
     validators: [
       validator('ds-error'),
       validator('date'),
+      validator('presence', true),
     ],
   },
   книга: {

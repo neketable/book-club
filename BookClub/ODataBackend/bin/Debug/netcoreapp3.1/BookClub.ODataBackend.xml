@@ -4,6 +4,46 @@
         <name>BookClub.ODataBackend</name>
     </assembly>
     <members>
+        <member name="T:IIS.BookClub.UserLogin">
+            <summary>
+            Класс пользователя.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.UserLogin.Login">
+            <summary>
+            Gets or sets Login.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.UserLogin.Password">
+            <summary>
+            Gets or sets Password.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub.UserModel">
+            <summary>
+            Класс пользователя.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.UserModel.Login">
+            <summary>
+            Gets or sets Login.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.UserModel.Password">
+            <summary>
+            Gets or sets Password.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.UserModel.Email">
+            <summary>
+            Gets or sets Email.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.UserModel.Role">
+            <summary>
+            Gets or sets Role.
+            </summary>
+        </member>
         <member name="T:IIS.BookClub.Program">
             <summary>
             Основной класс приложения.

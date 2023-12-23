@@ -3,6 +3,7 @@
   {{outlet "editrecord-modal"}}
   {{outlet "modal"}}
 {{else}}
+{{#if session.isAuthenticated}}
 {{#flexberry-sidebar
   class="inverted vertical main menu visible"
   settings=(hash
@@ -15,8 +16,10 @@
   {{flexberry-sitemap-guideline
  sitemap=sitemap class="flexberry-sitemap"}}
 {{/flexberry-sidebar}}
+{{/if}}
 <div class="bgw-fix">
   <div class="background-logo">
+    {{#if session.isAuthenticated}}
     <div class="ui top attached">
       <div class="ui attached menu">
         <div class="ui container flex-container">
@@ -35,6 +38,7 @@
         </div>
       </div>
     </div>
+    {{/if}}
     <a class="item logo"
       href="/"
       target="_blank"
@@ -47,11 +51,12 @@
         {{flexberry-dropdown
         class="compact theme"
         items=themes
-        value="default"
+        value="purple"
         onChange=(action "changeTheme")
         }}
       </div>
     </div>
+    {{#if session.isAuthenticated}}
     <div class="page-header-userbar">
       <img src="assets/images/user-foto.jpg"/>
       {{flexberry-menu
@@ -59,6 +64,7 @@
         onItemClick=(action "onMenuItemClick")
       }}
     </div>
+    {{/if}}
   </div>
 </div>
 <div id="example" class="pusher">

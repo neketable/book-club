@@ -39,6 +39,24 @@ $.extend(true, translations, {
     },
     index: {
       greeting: 'Добро пожаловать на тестовый стенд ember-flexberry!',
+      components: 'Некоторые компоненты',
+      'log-service': {
+        title: 'Сервис логирования',
+        'app-log': 'Лог приложения',
+        'settings-example': 'Пример работы с настройками',
+        'log-cleaning': 'Очистка лога'
+      },
+      users: 'Пользователи приложения',
+      localization: 'Локализация',
+      log: 'Лог приложения',
+      blocking: 'Список блокировок',
+      search: {
+        'title': 'Авторизация',
+        'field-label': 'Название поля',
+        'login-placeholder': 'Логин',
+        'password-placeholder': 'Пароль',
+        'button-caption': 'Войти',
+      }
     },
 
     application: {

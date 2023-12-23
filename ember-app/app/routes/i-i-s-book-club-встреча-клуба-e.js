@@ -1,6 +1,7 @@
 import EditFormRoute from 'ember-flexberry/routes/edit-form';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default EditFormRoute.extend({
+export default EditFormRoute.extend(AuthenticatedRouteMixin, {
   modelProjection: 'ВстречаКлубаE',
   modelName: 'i-i-s-book-club-встреча-клуба'
 });

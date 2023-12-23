@@ -43,7 +43,7 @@
       "ordered": false
     },
     {
-      "name": "резенция",
+      "name": "рецензия",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
@@ -106,8 +106,8 @@
           "index": 3
         },
         {
-          "name": "резенция",
-          "caption": "Резенция",
+          "name": "рецензия",
+          "caption": "Рецензия",
           "hidden": false,
           "index": 4
         }

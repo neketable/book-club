@@ -99,8 +99,6 @@ export let defineProjections = function (modelClass) {
     название: attr('Название', { index: 0 }),
     автор: attr('Автор', { index: 1 }),
     количествоСтраниц: attr('Количество страниц', { index: 2 }),
-    uRLОбложки: attr('URL обложки', { index: 3 }),
-    uRLОписания: attr('URL описания', { index: 4 }),
     теги: attr('Теги', { index: 5 }),
     средняяОценка: attr('Средняя оценка', { index: 6 })
   });

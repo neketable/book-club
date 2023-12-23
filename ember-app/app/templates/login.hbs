@@ -1,0 +1,12 @@
+<div class="ui form flexberry-vertical-form">
+  <div class="row bottom center aligned">
+    <div class="content">
+      <div class="header">{{t "forms.index.search.title"}}</div>
+      <form class="ui form">
+        {{flexberry-field value=login placeholder=(t "forms.index.search.login-placeholder")}}
+        {{flexberry-field value=pass type=password placeholder=(t "forms.index.search.password-placeholder")}}
+        <button class="ui primary large button" {{action 'login' login pass}}>{{t "forms.index.search.button-caption"}}</button>
+      </form>
+    </div>
+  </div>
+</div>

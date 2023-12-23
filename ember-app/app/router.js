@@ -31,6 +31,8 @@ Router.map(function () {
   { path: 'i-i-s-book-club-спикер-e/:id' });
   this.route('i-i-s-book-club-спикер-e.new',
   { path: 'i-i-s-book-club-спикер-e/new' });
+  this.route('login');
+  this.route('index', { path: '/' });
 });
 
 export default Router;

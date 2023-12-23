@@ -40,8 +40,6 @@ namespace IIS.BookClub
             "Название as \'Название\'",
             "Автор as \'Автор\'",
             "КоличествоСтраниц as \'Количество страниц\'",
-            "URLОбложки as \'URL обложки\'",
-            "URLОписания as \'URL описания\'",
             "Теги as \'Теги\'",
             "СредняяОценка as \'Средняя оценка\'"})]
     public class Книга : ICSSoft.STORMNET.DataObject
@@ -58,6 +56,8 @@ namespace IIS.BookClub
         private string fURLОписания;
         
         private string fТеги;
+
+        private double fСредняяОценка;
         
         // *** Start programmer edit section *** (Книга CustomMembers)
 
@@ -261,20 +261,19 @@ namespace IIS.BookClub
         // *** Start programmer edit section *** (Книга.СредняяОценка CustomAttributes)
 
         // *** End programmer edit section *** (Книга.СредняяОценка CustomAttributes)
-        [ICSSoft.STORMNET.NotStored()]
         public virtual double СредняяОценка
         {
             get
             {
                 // *** Start programmer edit section *** (Книга.СредняяОценка Get)
-
-                return 0;
+                double result = this.fСредняяОценка;
                 // *** End programmer edit section *** (Книга.СредняяОценка Get)
+                return result;
             }
             set
             {
                 // *** Start programmer edit section *** (Книга.СредняяОценка Set)
-
+                this.fСредняяОценка = value;
                 // *** End programmer edit section *** (Книга.СредняяОценка Set)
             }
         }

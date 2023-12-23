@@ -9,6 +9,46 @@
             Class for determinate objects assembly in DI.
             </summary>
         </member>
+        <member name="T:IIS.BookClub.User">
+            <summary>
+            User.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.User.Login">
+            <summary>
+            Login.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.User.Password">
+            <summary>
+            Password.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.User.Email">
+            <summary>
+            Email.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.User.Role">
+            <summary>
+            Role.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub.User.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.User.Views.UserE">
+            <summary>
+            "UserE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.User.Views.UserL">
+            <summary>
+            "UserL" view.
+            </summary>
+        </member>
         <member name="T:IIS.BookClub.ВстречаКлуба">
             <summary>
             Встреча клуба.
@@ -64,9 +104,9 @@
             URLВидео.
             </summary>
         </member>
-        <member name="P:IIS.BookClub.Доклад.Резенция">
+        <member name="P:IIS.BookClub.Доклад.Рецензия">
             <summary>
-            Резенция.
+            Рецензия.
             </summary>
         </member>
         <member name="P:IIS.BookClub.Доклад.Книга">

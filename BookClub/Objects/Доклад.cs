@@ -33,7 +33,7 @@ namespace IIS.BookClub
             "ОценкаКниги as \'Оценка книги\'",
             "URLПрезентации as \'URL презентации\'",
             "URLВидео as \'URL видео\'",
-            "Резенция as \'Резенция\'",
+            "Рецензия as \'Рецензия\'",
             "Книга as \'Книга\'",
             "Книга.Название as \'Название\'",
             "Спикер as \'Спикер\'",
@@ -53,7 +53,7 @@ namespace IIS.BookClub
         
         private string fURLВидео;
         
-        private string fРезенция;
+        private string fРецензия;
         
         private IIS.BookClub.Книга fКнига;
         
@@ -193,34 +193,34 @@ namespace IIS.BookClub
         }
         
         /// <summary>
-        /// Резенция.
+        /// Рецензия.
         /// </summary>
-        // *** Start programmer edit section *** (Доклад.Резенция CustomAttributes)
+        // *** Start programmer edit section *** (Доклад.Рецензия CustomAttributes)
 
-        // *** End programmer edit section *** (Доклад.Резенция CustomAttributes)
+        // *** End programmer edit section *** (Доклад.Рецензия CustomAttributes)
         [StrLen(255)]
-        public virtual string Резенция
+        public virtual string Рецензия
         {
             get
             {
-                // *** Start programmer edit section *** (Доклад.Резенция Get start)
+                // *** Start programmer edit section *** (Доклад.Рецензия Get start)
 
-                // *** End programmer edit section *** (Доклад.Резенция Get start)
-                string result = this.fРезенция;
-                // *** Start programmer edit section *** (Доклад.Резенция Get end)
+                // *** End programmer edit section *** (Доклад.Рецензия Get start)
+                string result = this.fРецензия;
+                // *** Start programmer edit section *** (Доклад.Рецензия Get end)
 
-                // *** End programmer edit section *** (Доклад.Резенция Get end)
+                // *** End programmer edit section *** (Доклад.Рецензия Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Доклад.Резенция Set start)
+                // *** Start programmer edit section *** (Доклад.Рецензия Set start)
 
-                // *** End programmer edit section *** (Доклад.Резенция Set start)
-                this.fРезенция = value;
-                // *** Start programmer edit section *** (Доклад.Резенция Set end)
+                // *** End programmer edit section *** (Доклад.Рецензия Set start)
+                this.fРецензия = value;
+                // *** Start programmer edit section *** (Доклад.Рецензия Set end)
 
-                // *** End programmer edit section *** (Доклад.Резенция Set end)
+                // *** End programmer edit section *** (Доклад.Рецензия Set end)
             }
         }
         
@@ -231,6 +231,7 @@ namespace IIS.BookClub
 
         // *** End programmer edit section *** (Доклад.Книга CustomAttributes)
         [NotNull()]
+        [PropertyStorage(new string[] {"Книга"})]
         public virtual IIS.BookClub.Книга Книга
         {
             get
@@ -263,6 +264,7 @@ namespace IIS.BookClub
 
         // *** End programmer edit section *** (Доклад.Спикер CustomAttributes)
         [NotNull()]
+        [PropertyStorage(new string[] {"Спикер"})]
         public virtual IIS.BookClub.Спикер Спикер
         {
             get

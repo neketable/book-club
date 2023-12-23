@@ -9,7 +9,7 @@ export let Model = Mixin.create({
   оценкаКниги: DS.attr('number'),
   uRLПрезентации: DS.attr('string'),
   uRLВидео: DS.attr('string'),
-  резенция: DS.attr('string'),
+  рецензия: DS.attr('string'),
   книга: DS.belongsTo('i-i-s-book-club-книга', { inverse: null, async: false }),
   спикер: DS.belongsTo('i-i-s-book-club-спикер', { inverse: null, async: false }),
   встречаКлуба: DS.belongsTo('i-i-s-book-club-встреча-клуба', { inverse: 'доклад', async: false })
@@ -42,8 +42,8 @@ export let ValidationRules = {
       validator('ds-error'),
     ],
   },
-  резенция: {
-    descriptionKey: 'models.i-i-s-book-club-доклад.validations.резенция.__caption__',
+  рецензия: {
+    descriptionKey: 'models.i-i-s-book-club-доклад.validations.рецензия.__caption__',
     validators: [
       validator('ds-error'),
     ],
@@ -77,7 +77,7 @@ export let defineProjections = function (modelClass) {
     оценкаКниги: attr('Оценка книги', { index: 1 }),
     uRLПрезентации: attr('URL презентации', { index: 2 }),
     uRLВидео: attr('URL видео', { index: 3 }),
-    резенция: attr('Резенция', { index: 4 }),
+    рецензия: attr('Рецензия', { index: 4 }),
     книга: belongsTo('i-i-s-book-club-книга', 'Книга', {
       название: attr('Название', { index: 6, hidden: true })
     }, { index: 5, displayMemberPath: 'название' }),
