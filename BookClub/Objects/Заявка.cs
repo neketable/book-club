@@ -33,15 +33,15 @@ namespace IIS.BookClub
             "Книга as \'Книга\'",
             "Книга.Название as \'Название\'",
             "Спикер as \'Спикер\'",
-            "Спикер.Фамилия as \'Фамилия\'"}, Hidden=new string[] {
+            "Спикер.FullName as \'ФИО\'"}, Hidden=new string[] {
             "Книга.Название",
-            "Спикер.Фамилия"})]
+            "Спикер.FullName"})]
     [MasterViewDefineAttribute("ЗаявкаE", "Книга", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Название")]
-    [MasterViewDefineAttribute("ЗаявкаE", "Спикер", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Фамилия")]
+    [MasterViewDefineAttribute("ЗаявкаE", "Спикер", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "FullName")]
     [View("ЗаявкаL", new string[] {
             "ДатаЗаявки as \'Дата заявки\'",
             "Книга.Название as \'Название\'",
-            "Спикер.Фамилия as \'Фамилия\'"})]
+            "Спикер.FullName as \'ФИО\'"})]
     public class Заявка : ICSSoft.STORMNET.DataObject
     {
         
@@ -94,6 +94,8 @@ namespace IIS.BookClub
 
         // *** End programmer edit section *** (Заявка.Книга CustomAttributes)
         [NotNull()]
+        [PropertyStorage(new string[] {
+                "Книга"})]
         public virtual IIS.BookClub.Книга Книга
         {
             get
@@ -126,6 +128,8 @@ namespace IIS.BookClub
 
         // *** End programmer edit section *** (Заявка.Спикер CustomAttributes)
         [NotNull()]
+        [PropertyStorage(new string[] {
+                "Спикер"})]
         public virtual IIS.BookClub.Спикер Спикер
         {
             get

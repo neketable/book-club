@@ -11,10 +11,13 @@
 namespace IIS.BookClub
 {
     using System;
+    using System.Linq;
     using System.Xml;
     using ICSSoft.STORMNET;
-    
-    
+    using ICSSoft.STORMNET.Business;
+    using ICSSoft.STORMNET.FunctionalLanguage;
+
+
     // *** Start programmer edit section *** (Using statements)
 
     // *** End programmer edit section *** (Using statements)
@@ -254,26 +257,35 @@ namespace IIS.BookClub
                 // *** End programmer edit section *** (Книга.Теги Set end)
             }
         }
-        
+
         /// <summary>
         /// СредняяОценка.
         /// </summary>
         // *** Start programmer edit section *** (Книга.СредняяОценка CustomAttributes)
 
         // *** End programmer edit section *** (Книга.СредняяОценка CustomAttributes)
+        [ICSSoft.STORMNET.NotStored()]
         public virtual double СредняяОценка
         {
             get
             {
                 // *** Start programmer edit section *** (Книга.СредняяОценка Get)
-                double result = this.fСредняяОценка;
+                LoadingCustomizationStruct lcs = LoadingCustomizationStruct.GetSimpleStruct(typeof(Доклад), Доклад.Views.ДокладE);
+                lcs.LimitFunction = FunctionBuilder.BuildEquals<Доклад>(x => x.Книга, this);
+                SQLDataService ds = (SQLDataService)DataServiceProvider.DataService;
+                var dataObjs = ds.LoadObjects(lcs).Cast<Доклад>().ToList();
+                double mark = 0;
+                foreach (var obj in dataObjs)
+                {
+                    mark += obj.ОценкаКниги;
+                }
+                double result = mark / dataObjs.Count;
                 // *** End programmer edit section *** (Книга.СредняяОценка Get)
                 return result;
             }
             set
             {
                 // *** Start programmer edit section *** (Книга.СредняяОценка Set)
-                this.fСредняяОценка = value;
                 // *** End programmer edit section *** (Книга.СредняяОценка Set)
             }
         }

@@ -5,7 +5,6 @@ import { validator } from 'ember-cp-validations';
 import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
-  датаДоклада: DS.attr('date'),
   оценкаКниги: DS.attr('number'),
   uRLПрезентации: DS.attr('string'),
   uRLВидео: DS.attr('string'),
@@ -16,18 +15,11 @@ export let Model = Mixin.create({
 });
 
 export let ValidationRules = {
-  датаДоклада: {
-    descriptionKey: 'models.i-i-s-book-club-доклад.validations.датаДоклада.__caption__',
-    validators: [
-      validator('ds-error'),
-      validator('date'),
-    ],
-  },
   оценкаКниги: {
     descriptionKey: 'models.i-i-s-book-club-доклад.validations.оценкаКниги.__caption__',
     validators: [
       validator('ds-error'),
-      validator('number', { allowString: true, allowBlank: true, integer: true }),
+      validator('number', { allowString: true, allowBlank: true, integer: true, gte: 1, lte: 10 }),
     ],
   },
   uRLПрезентации: {
@@ -73,7 +65,6 @@ export let ValidationRules = {
 
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ДокладE', 'i-i-s-book-club-доклад', {
-    датаДоклада: attr('Дата доклада', { index: 0 }),
     оценкаКниги: attr('Оценка книги', { index: 1 }),
     uRLПрезентации: attr('URL презентации', { index: 2 }),
     uRLВидео: attr('URL видео', { index: 3 }),
@@ -82,7 +73,19 @@ export let defineProjections = function (modelClass) {
       название: attr('Название', { index: 6, hidden: true })
     }, { index: 5, displayMemberPath: 'название' }),
     спикер: belongsTo('i-i-s-book-club-спикер', 'Спикер', {
-      фамилия: attr('Фамилия', { index: 8, hidden: true })
-    }, { index: 7, displayMemberPath: 'фамилия' })
+      fullName: attr('FullName', { index: 8, hidden: true })
+    }, { index: 7, displayMemberPath: 'fullName' })
+  });
+  modelClass.defineProjection('ДокладL', 'i-i-s-book-club-доклад', {
+    оценкаКниги: attr('Оценка книги', { index: 1 }),
+    uRLПрезентации: attr('URL презентации', { index: 2 }),
+    uRLВидео: attr('URL видео', { index: 3 }),
+    рецензия: attr('Рецензия', { index: 4 }),
+    книга: belongsTo('i-i-s-book-club-книга', 'Название', {
+      название: attr('Название', { index: 5 })
+    }, { index: -1, hidden: true }),
+    спикер: belongsTo('i-i-s-book-club-спикер', 'FullName', {
+      fullName: attr('Спикер', { index: 6 })
+    }, { index: -1, hidden: true })
   });
 };

@@ -84,11 +84,6 @@
             Доклад.
             </summary>
         </member>
-        <member name="P:IIS.BookClub.Доклад.ДатаДоклада">
-            <summary>
-            ДатаДоклада.
-            </summary>
-        </member>
         <member name="P:IIS.BookClub.Доклад.ОценкаКниги">
             <summary>
             ОценкаКниги.
@@ -132,6 +127,11 @@
         <member name="P:IIS.BookClub.Доклад.Views.ДокладE">
             <summary>
             "ДокладE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.Доклад.Views.ДокладL">
+            <summary>
+            "ДокладL" view.
             </summary>
         </member>
         <member name="T:IIS.BookClub.DetailArrayOfДоклад">
@@ -283,6 +283,11 @@
         <member name="P:IIS.BookClub.Спикер.Отчество">
             <summary>
             Отчество.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub.Спикер.FullName">
+            <summary>
+            ФИО.
             </summary>
         </member>
         <member name="T:IIS.BookClub.Спикер.Views">

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Доклад",
+  "name": "IISBookClubДокладE",
+  "className": "ДокладE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-доклад",
+      "modelProjection": "ДокладE"
+    }
+  ]
+}

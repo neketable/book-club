@@ -30,7 +30,6 @@ export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ВстречаКлубаE', 'i-i-s-book-club-встреча-клуба', {
     датаВстречи: attr('Дата встречи', { index: 0 }),
     доклад: hasMany('i-i-s-book-club-доклад', 'Доклад', {
-      датаДоклада: attr('Дата доклада', { index: 0 }),
       оценкаКниги: attr('Оценка книги', { index: 1 }),
       uRLПрезентации: attr('URL презентации', { index: 2 }),
       uRLВидео: attr('URL видео', { index: 3 }),

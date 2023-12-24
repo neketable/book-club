@@ -1,0 +1,111 @@
+<h3 class="ui header">{{t "forms.i-i-s-book-club-доклад-e.caption"}}{{#if readonly}} ({{t "forms.edit-form.readonly"}}){{/if}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    {{flexberry-edit-panel
+      showCloseButton=true
+      deepMount=true
+      readonly=readonly
+      buttons=(array
+        (hash
+          type="submit"
+          class="save-button"
+          disabled=(readonly)
+          text=(t "forms.edit-form.save-button-text")
+          icon="icon icon-save"
+          action="save")
+        (hash
+          type="submit"
+          class="save-close-button"
+          disabled=(readonly)
+          text=(t "forms.edit-form.saveAndClose-button-text")
+          icon="icon icon-save-close"
+          action="saveAndClose"
+        ))
+    }}
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.оценкаКниги
+      class=(if (v-get validationModel "оценкаКниги" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-доклад-e.оценка-caption")
+      data-test-i-i-s-book-club-доклад-e-название=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оценкаКниги" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.uRLПрезентации
+      class=(if (v-get validationModel "uRLПрезентации" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-доклад-e.url-презентации-caption")
+      data-test-i-i-s-book-club-доклад-e-uRLПрезентации=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "uRLПрезентации" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.uRLВидео
+      class=(if (v-get validationModel "uRLВидео" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-доклад-e.url-видео-caption")
+      data-test-i-i-s-book-club-доклад-e-uRLВидео=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "uRLВидео" "message")}}
+  </div>
+    <div class="field">
+    <label>{{t "forms.i-i-s-book-club-доклад-e.книга-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.книга
+      displayAttributeName="название"
+      autocomplete=true
+      relationName="книга"
+      projection="КнигаL"
+      title=(t "forms.i-i-s-book-club-доклад-e.книга-caption")
+      readonly=readonly
+      componentName="книгаLookup"
+      updateLookupValue=(action "updateLookupValue")
+      class=(if (v-get validationModel "книга" "isInvalid") "error")
+      data-test-i-i-s-book-club-доклад-e-книга=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "книга" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-book-club-доклад-e.спикер-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.спикер
+      displayAttributeName="fullName"
+      autocomplete=true
+      relationName="спикер"
+      projection="СпикерL"
+      title=(t "forms.i-i-s-book-club-доклад-e.спикер-caption")
+      readonly=readonly
+      componentName="спикерLookup"
+      updateLookupValue=(action "updateLookupValue")
+      class=(if (v-get validationModel "спикер" "isInvalid") "error")
+      data-test-i-i-s-book-club-доклад-e-спикер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "спикер" "message")}}
+  </div>
+    <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.рецензия
+      class=(if (v-get validationModel "рецензия" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-доклад-e.рецензия-caption")
+      data-test-i-i-s-book-club-доклад-e-рецензия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "рецензия" "message")}}
+  </div>
+</form>

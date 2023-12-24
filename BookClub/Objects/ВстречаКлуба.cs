@@ -77,13 +77,15 @@ namespace IIS.BookClub
                 // *** End programmer edit section *** (ВстречаКлуба.ДатаВстречи Set end)
             }
         }
-        
+
         /// <summary>
         /// Встреча клуба.
         /// </summary>
         // *** Start programmer edit section *** (ВстречаКлуба.Доклад CustomAttributes)
 
         // *** End programmer edit section *** (ВстречаКлуба.Доклад CustomAttributes)
+        [PropertyStorage(new string[] {
+                "Доклад"})]
         public virtual IIS.BookClub.DetailArrayOfДоклад Доклад
         {
             get

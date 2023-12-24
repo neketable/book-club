@@ -7,7 +7,13 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 export let Model = Mixin.create({
   фамилия: DS.attr('string'),
   имя: DS.attr('string'),
-  отчество: DS.attr('string')
+  отчество: DS.attr('string'),
+  /**
+    Non-stored property.
+
+    @property fullName
+  */
+    fullName: DS.attr('string'),
 });
 
 export let ValidationRules = {

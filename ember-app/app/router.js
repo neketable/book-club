@@ -31,6 +31,11 @@ Router.map(function () {
   { path: 'i-i-s-book-club-спикер-e/:id' });
   this.route('i-i-s-book-club-спикер-e.new',
   { path: 'i-i-s-book-club-спикер-e/new' });
+  this.route('i-i-s-book-club-доклад-l');
+  this.route('i-i-s-book-club-доклад-e',
+  { path: 'i-i-s-book-club-доклад-e/:id' });
+  this.route('i-i-s-book-club-доклад-e.new',
+  { path: 'i-i-s-book-club-доклад-e/new' });
   this.route('login');
   this.route('index', { path: '/' });
 });

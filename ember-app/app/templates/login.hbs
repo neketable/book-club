@@ -4,9 +4,28 @@
       <div class="header">{{t "forms.index.search.title"}}</div>
       <form class="ui form">
         {{flexberry-field value=login placeholder=(t "forms.index.search.login-placeholder")}}
-        {{flexberry-field value=pass type=password placeholder=(t "forms.index.search.password-placeholder")}}
-        <button class="ui primary large button" {{action 'login' login pass}}>{{t "forms.index.search.button-caption"}}</button>
+        {{input type="password" placeholder=(t "forms.index.search.password-placeholder") value=pass}}
+        {{!-- {{flexberry-field type=password value=pass placeholder=(t "forms.index.search.password-placeholder")}} --}}
+        <button style="margin-top: 10px;" class="ui primary large button" {{action 'login' login pass}}>{{t "forms.index.search.button-caption"}}</button>
       </form>
     </div>
   </div>
 </div>
+{{#if modalErr}}
+  {{#modal-dialog
+    title=(t "forms.auth_modal.title")
+    useOkButton=false
+    useCloseButton=false
+    close=(action "closeModal")
+    settings=(hash
+      context=".stackable.grid.container"
+    )
+  }}
+    <p>Ошибка: Проверьте правильность введеных данных.</p>
+    <div>
+      <button class="ui button primary" {{action "closeModal" }}>
+        {{t "forms.auth_modal.close"}}
+      </button>
+    </div>
+  {{/modal-dialog}}
+{{/if}}

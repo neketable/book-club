@@ -1,12 +1,12 @@
 {{flexberry-error error=error}}
-<h3>{{t "forms.i-i-s-book-club-план-встречи-l.caption"}}</h3>
+<h3>{{t "forms.i-i-s-book-club-доклад-l.caption"}}</h3>
 <div class="row">
   {{flexberry-objectlistview
     modelName=modelName
     modelProjection=modelProjection
     editFormRoute=editFormRoute
     content=model
-    createNewButton=true
+    createNewButton=false
     refreshButton=true
     sorting=computedSorting
     orderable=true
@@ -23,13 +23,13 @@
     previousPage=(action "previousPage")
     gotoPage=(action "gotoPage")
     nextPage=(action "nextPage")
-    componentName="IISBookClubПланВстречиL"
+    componentName="IISBookClubДокладL"
     deleteButton=true
     exportExcelButton=false
     enableFilters=true
     filters=filters
     filterButton=true
-    showDeleteButtonInRow=true
+    showDeleteButtonInRow=false
     showPrototypeButtonInRow=false
     showEditButtonInRow=true
     showFiltersInModal=true

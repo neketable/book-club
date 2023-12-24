@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-book-club-доклад-e",
+  "editForm": "i-i-s-book-club-доклад-e",
+  "external": false,
+  "caption": "Доклад",
+  "name": "IISBookClubДокладL",
+  "className": "ДокладL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-доклад",
+      "modelProjection": "ДокладL"
+    }
+  ]
+}

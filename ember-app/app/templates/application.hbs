@@ -3,7 +3,6 @@
   {{outlet "editrecord-modal"}}
   {{outlet "modal"}}
 {{else}}
-{{#if session.isAuthenticated}}
 {{#flexberry-sidebar
   class="inverted vertical main menu visible"
   settings=(hash
@@ -13,13 +12,13 @@
     onHidden=(action "updateWidth")
   )
 }}
+{{#if session.isAuthenticated}}
   {{flexberry-sitemap-guideline
- sitemap=sitemap class="flexberry-sitemap"}}
-{{/flexberry-sidebar}}
+  sitemap=sitemap class="flexberry-sitemap"}}
 {{/if}}
+{{/flexberry-sidebar}}
 <div class="bgw-fix">
   <div class="background-logo">
-    {{#if session.isAuthenticated}}
     <div class="ui top attached">
       <div class="ui attached menu">
         <div class="ui container flex-container">
@@ -38,7 +37,6 @@
         </div>
       </div>
     </div>
-    {{/if}}
     <a class="item logo"
       href="/"
       target="_blank"
@@ -48,6 +46,9 @@
     <div class="page-header-caption"><a href="#">{{t "application-name"}}</a></div>
     <div class="page-header-actions ui text menu">
       <div class="item">
+        <label style="margin-right: 5px;">
+          Тема
+        </label>
         {{flexberry-dropdown
         class="compact theme"
         items=themes

@@ -4,11 +4,13 @@ import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations'
 import IISBookClubВстречаКлубаLForm from './forms/i-i-s-book-club-встреча-клуба-l';
 import IISBookClubЗаявкаLForm from './forms/i-i-s-book-club-заявка-l';
 import IISBookClubКнигаLForm from './forms/i-i-s-book-club-книга-l';
+import IISBookClubДокладLForm from './forms/i-i-s-book-club-доклад-l';
 import IISBookClubПланВстречиLForm from './forms/i-i-s-book-club-план-встречи-l';
 import IISBookClubСпикерLForm from './forms/i-i-s-book-club-спикер-l';
 import IISBookClubВстречаКлубаEForm from './forms/i-i-s-book-club-встреча-клуба-e';
 import IISBookClubЗаявкаEForm from './forms/i-i-s-book-club-заявка-e';
 import IISBookClubКнигаEForm from './forms/i-i-s-book-club-книга-e';
+import IISBookClubДокладEForm from './forms/i-i-s-book-club-доклад-e';
 import IISBookClubПланВстречиEForm from './forms/i-i-s-book-club-план-встречи-e';
 import IISBookClubСпикерEForm from './forms/i-i-s-book-club-спикер-e';
 import IISBookClubВстречаКлубаModel from './models/i-i-s-book-club-встреча-клуба';
@@ -57,6 +59,11 @@ $.extend(true, translations, {
         'password-placeholder': 'Пароль',
         'button-caption': 'Войти',
       }
+    },
+
+    auth_modal: {
+      title: 'Ошибка авторизации',
+      close: 'Закрыть',
     },
 
     application: {
@@ -116,26 +123,30 @@ $.extend(true, translations, {
           title: '',
         },
         'book-club': {
-          caption: 'book-club',
-          title: 'book-club',
+          caption: 'Книжный клуб',
+          title: 'Книжный клуб',
           'i-i-s-book-club-спикер-l': {
-            caption: 'Спикер',
+            caption: 'Спикеры',
             title: '',
           },
           'i-i-s-book-club-заявка-l': {
-            caption: 'Заявка',
+            caption: 'Заявки',
             title: '',
           },
           'i-i-s-book-club-план-встречи-l': {
-            caption: 'План встречи',
+            caption: 'Планы встречи',
             title: '',
           },
           'i-i-s-book-club-встреча-клуба-l': {
-            caption: 'Встреча клуба',
+            caption: 'Встречи клуба',
             title: '',
           },
           'i-i-s-book-club-книга-l': {
-            caption: 'Книга',
+            caption: 'Книги',
+            title: '',
+          },
+          'i-i-s-book-club-доклад-l': {
+            caption: 'Доклады',
             title: '',
           },
         },
@@ -155,11 +166,13 @@ $.extend(true, translations, {
     'i-i-s-book-club-книга-l': IISBookClubКнигаLForm,
     'i-i-s-book-club-план-встречи-l': IISBookClubПланВстречиLForm,
     'i-i-s-book-club-спикер-l': IISBookClubСпикерLForm,
+    'i-i-s-book-club-доклад-l': IISBookClubДокладLForm,
     'i-i-s-book-club-встреча-клуба-e': IISBookClubВстречаКлубаEForm,
     'i-i-s-book-club-заявка-e': IISBookClubЗаявкаEForm,
     'i-i-s-book-club-книга-e': IISBookClubКнигаEForm,
     'i-i-s-book-club-план-встречи-e': IISBookClubПланВстречиEForm,
     'i-i-s-book-club-спикер-e': IISBookClubСпикерEForm,
+    'i-i-s-book-club-доклад-e': IISBookClubДокладEForm,
   },
 
 });

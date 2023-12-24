@@ -29,7 +29,6 @@ namespace IIS.BookClub
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ДокладE", new string[] {
-            "ДатаДоклада as \'Дата доклада\'",
             "ОценкаКниги as \'Оценка книги\'",
             "URLПрезентации as \'URL презентации\'",
             "URLВидео as \'URL видео\'",
@@ -37,16 +36,28 @@ namespace IIS.BookClub
             "Книга as \'Книга\'",
             "Книга.Название as \'Название\'",
             "Спикер as \'Спикер\'",
-            "Спикер.Фамилия as \'Фамилия\'"}, Hidden=new string[] {
+            "Спикер.Фамилия as \'Фамилия\'",
+            "Спикер.Имя as \'Имя\'",
+            "Спикер.Отчество as \'Отчество\'",
+            "Спикер.FullName as \'ФИО\'"}, Hidden=new string[] {
             "Книга.Название",
-            "Спикер.Фамилия"})]
+            "Спикер.FullName",
+            "Спикер.Фамилия",
+            "Спикер.Имя as \'Имя\'",
+            "Спикер.Отчество as \'Отчество\'"})]
     [MasterViewDefineAttribute("ДокладE", "Книга", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Название")]
-    [MasterViewDefineAttribute("ДокладE", "Спикер", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Фамилия")]
+    [MasterViewDefineAttribute("ДокладE", "Спикер", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "FullName")]
+    [View("ДокладL", new string[] {
+            "ОценкаКниги as \'Оценка книги\'",
+            "URLПрезентации as \'URL презентации\'",
+            "URLВидео as \'URL видео\'",
+            "Рецензия as \'Рецензия\'",
+            "Книга as \'Книга\'",
+            "Книга.Название as \'Название\'",
+            "Спикер as \'Спикер\'",
+            "Спикер.FullName as \'ФИО\'"})]
     public class Доклад : ICSSoft.STORMNET.DataObject
-    {
-        
-        private System.DateTime fДатаДоклада;
-        
+    {            
         private int fОценкаКниги;
         
         private string fURLПрезентации;
@@ -63,39 +74,7 @@ namespace IIS.BookClub
         
         // *** Start programmer edit section *** (Доклад CustomMembers)
 
-        // *** End programmer edit section *** (Доклад CustomMembers)
-
-        
-        /// <summary>
-        /// ДатаДоклада.
-        /// </summary>
-        // *** Start programmer edit section *** (Доклад.ДатаДоклада CustomAttributes)
-
-        // *** End programmer edit section *** (Доклад.ДатаДоклада CustomAttributes)
-        public virtual System.DateTime ДатаДоклада
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Доклад.ДатаДоклада Get start)
-
-                // *** End programmer edit section *** (Доклад.ДатаДоклада Get start)
-                System.DateTime result = this.fДатаДоклада;
-                // *** Start programmer edit section *** (Доклад.ДатаДоклада Get end)
-
-                // *** End programmer edit section *** (Доклад.ДатаДоклада Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Доклад.ДатаДоклада Set start)
-
-                // *** End programmer edit section *** (Доклад.ДатаДоклада Set start)
-                this.fДатаДоклада = value;
-                // *** Start programmer edit section *** (Доклад.ДатаДоклада Set end)
-
-                // *** End programmer edit section *** (Доклад.ДатаДоклада Set end)
-            }
-        }
+        // *** End programmer edit section *** (Доклад CustomMembers)    
         
         /// <summary>
         /// ОценкаКниги.
@@ -198,7 +177,6 @@ namespace IIS.BookClub
         // *** Start programmer edit section *** (Доклад.Рецензия CustomAttributes)
 
         // *** End programmer edit section *** (Доклад.Рецензия CustomAttributes)
-        [StrLen(255)]
         public virtual string Рецензия
         {
             get
@@ -298,6 +276,8 @@ namespace IIS.BookClub
         // *** End programmer edit section *** (Доклад.ВстречаКлуба CustomAttributes)
         [Agregator()]
         [NotNull()]
+        [PropertyStorage(new string[] {
+                "ВстречаКлуба"})]
         public virtual IIS.BookClub.ВстречаКлуба ВстречаКлуба
         {
             get
@@ -337,6 +317,17 @@ namespace IIS.BookClub
                 get
                 {
                     return ICSSoft.STORMNET.Information.GetView("ДокладE", typeof(IIS.BookClub.Доклад));
+                }
+            }
+
+            /// <summary>
+            /// "ДокладL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДокладL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДокладL", typeof(IIS.BookClub.Доклад));
                 }
             }
         }

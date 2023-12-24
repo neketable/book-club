@@ -42,6 +42,13 @@
           "caption": "Книга",
           "title": "",
           "children": null
+        },
+        {
+          "link": "i-i-s-book-club-доклад-l",
+          "menuName": null,
+          "caption": "Доклад",
+          "title": "",
+          "children": null
         }
       ]
     }

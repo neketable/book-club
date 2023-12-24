@@ -22,7 +22,7 @@ export default Controller.extend({
             link: 'i-i-s-book-club-спикер-l',
             caption: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-спикер-l.caption'),
             title: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-спикер-l.title'),
-            icon: 'suitcase',
+            icon: 'icon-guideline-user',
             children: null
           }, {
             link: 'i-i-s-book-club-заявка-l',
@@ -31,22 +31,22 @@ export default Controller.extend({
             icon: 'briefcase',
             children: null
           }, {
-            link: 'i-i-s-book-club-план-встречи-l',
-            caption: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-план-встречи-l.caption'),
-            title: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-план-встречи-l.title'),
-            icon: 'chart bar',
-            children: null
-          }, {
             link: 'i-i-s-book-club-встреча-клуба-l',
             caption: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-встреча-клуба-l.caption'),
             title: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-встреча-клуба-l.title'),
-            icon: 'address card',
+            icon: 'icon-guideline-clock',
             children: null
           }, {
             link: 'i-i-s-book-club-книга-l',
             caption: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-книга-l.caption'),
             title: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-книга-l.title'),
-            icon: 'briefcase',
+            icon: 'icon-guideline-book',
+            children: null
+          }, {
+            link: 'i-i-s-book-club-доклад-l',
+            caption: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-доклад-l.caption'),
+            title: i18n.t('forms.application.sitemap.book-club.i-i-s-book-club-доклад-l.title'),
+            icon: 'icon-guideline-eye',
             children: null
           }]
         }

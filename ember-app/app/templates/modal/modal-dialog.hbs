@@ -1,0 +1,13 @@
+{{#modal-dialog
+  title=(t "forms.auth_modal.title")
+  useOkButton=false
+  useCloseButton=false
+  close="closeModal"
+}}
+  <p>Ошибка: Проверьте правильность введеных данных.</p>
+  <div>
+    <button class="ui button primary" {{action "removeModalDialog"}}>
+      {{t "forms.auth_modal.close"}}
+    </button>
+  </div>
+{{/modal-dialog}}

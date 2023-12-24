@@ -31,11 +31,15 @@ namespace IIS.BookClub
     [View("СпикерE", new string[] {
             "Фамилия as \'Фамилия\'",
             "Имя as \'Имя\'",
-            "Отчество as \'Отчество\'"})]
+            "Отчество as \'Отчество\'",
+            "FullName"}, Hidden = new string[] {
+            "FullName"})]
     [View("СпикерL", new string[] {
             "Фамилия as \'Фамилия\'",
             "Имя as \'Имя\'",
-            "Отчество as \'Отчество\'"})]
+            "Отчество as \'Отчество\'",
+            "FullName"}, Hidden = new string[] {
+            "FullName"})]
     public class Спикер : ICSSoft.STORMNET.DataObject
     {
         
@@ -145,7 +149,32 @@ namespace IIS.BookClub
                 // *** End programmer edit section *** (Спикер.Отчество Set end)
             }
         }
-        
+
+        /// <summary>
+        /// ФИО.
+        /// </summary>
+        // *** Start programmer edit section *** (Leechnost.FullName CustomAttributes)
+
+        // *** End programmer edit section *** (Leechnost.FullName CustomAttributes)
+        [ICSSoft.STORMNET.NotStored()]
+        [StrLen(255)]
+        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.SQLDataService), "@Фамилия@ || \' \' || @Имя@ || \' \' || COALESCE(@Отчество@, \'\')")]
+        public virtual string FullName
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Leechnost.FullName Get)
+                return $"{this.Фамилия} {this.Имя} {this.Отчество}";
+                // *** End programmer edit section *** (Leechnost.FullName Get)
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Leechnost.FullName Set)
+
+                // *** End programmer edit section *** (Leechnost.FullName Set)
+            }
+        }
+
         /// <summary>
         /// Class views container.
         /// </summary>

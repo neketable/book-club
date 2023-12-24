@@ -42,8 +42,8 @@ export let defineProjections = function (modelClass) {
       название: attr('Название', { index: 2, hidden: true })
     }, { index: 1, displayMemberPath: 'название' }),
     спикер: belongsTo('i-i-s-book-club-спикер', 'Спикер', {
-      фамилия: attr('Фамилия', { index: 4, hidden: true })
-    }, { index: 3, displayMemberPath: 'фамилия' })
+      fullName: attr('FullName', { index: 4, hidden: true })
+    }, { index: 3, displayMemberPath: 'fullName' })
   });
 
   modelClass.defineProjection('ЗаявкаL', 'i-i-s-book-club-заявка', {
@@ -51,8 +51,8 @@ export let defineProjections = function (modelClass) {
     книга: belongsTo('i-i-s-book-club-книга', 'Название', {
       название: attr('Название', { index: 1 })
     }, { index: -1, hidden: true }),
-    спикер: belongsTo('i-i-s-book-club-спикер', 'Фамилия', {
-      фамилия: attr('Фамилия', { index: 2 })
+    спикер: belongsTo('i-i-s-book-club-спикер', 'FullName', {
+      fullName: attr('Спикер', { index: 2 })
     }, { index: -1, hidden: true })
   });
 };
