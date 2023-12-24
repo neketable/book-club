@@ -79,7 +79,7 @@ tmp/
 #ember dependencies
 /node_modules
 /bower_components
-assets/*.css
+ember-app/public/assets/*.css
 
 #Idea
 .idea/
